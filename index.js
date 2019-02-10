@@ -110,7 +110,6 @@ class Autocomplete extends Component {
 	_keyExtractor = (item, index) => item.idt;
 
 	renderResultList() {
-		const { dataSource } = this.state;
 		const {
 			listStyle,
 			renderItem,
@@ -150,7 +149,6 @@ class Autocomplete extends Component {
 	}
 
 	render() {
-		const { dataSource } = this.state;
 		const {
 			containerStyle,
 			hideResults,
@@ -159,7 +157,6 @@ class Autocomplete extends Component {
 			onShowResults,
 			onStartShouldSetResponderCapture
 		} = this.props;
-		const showResults = dataSource.getRowCount() > 0;
 
 		// Notify listener if the suggestion will be shown.
 		onShowResults && onShowResults(showResults);
@@ -172,7 +169,7 @@ class Autocomplete extends Component {
 						style={listContainerStyle}
 						onStartShouldSetResponderCapture={onStartShouldSetResponderCapture}
 					>
-						{showResults && this.renderResultList()}
+						{this.renderResultList()}
 					</View>
 				)}
 			</View>
