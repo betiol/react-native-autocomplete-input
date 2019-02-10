@@ -35,7 +35,8 @@
   },
   "homepage": "https://github.com/l-urence/react-native-autocomplete-input#readme",
   "dependencies": {
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.5.10",
+    "react-native-optimized-flatlist": "^1.0.4"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
